@@ -1,0 +1,34 @@
+{
+    "properties": [
+        {
+            "imageSrc": "/imgs/ashford-place/18753-mcfall-drive.jpeg",
+            "address": "18753 McFall Drive",
+            "propertyLink": "#"
+        },
+        {
+            "imageSrc": "",
+            "address": "",
+            "propertyLink": ""
+        },
+        {
+            "imageSrc": "",
+            "address": "",
+            "propertyLink": ""
+        },
+        {
+            "imageSrc": "",
+            "address": "",
+            "propertyLink": ""
+        },
+        {
+            "imageSrc": "",
+            "address": "",
+            "propertyLink": ""
+        },
+        {
+            "imageSrc": "",
+            "address": "",
+            "propertyLink": ""
+        }
+    ]
+}
