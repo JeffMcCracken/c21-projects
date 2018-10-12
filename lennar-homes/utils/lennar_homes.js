@@ -42,6 +42,16 @@ var data = {
                     propertyLink: "#"
                 }
             ]
+        },
+        {
+            name: "Bridger Pines",
+            property: [
+                {
+                    imageSrc: "imgs/bridger-pines/16252-sedalio-drive.jpeg",
+                    address: "16252 Sedalio Drive",
+                    propertyLinkk: "#"
+                }
+            ]
         }
     ]
 };
