@@ -31,14 +31,7 @@
         </section>
         <div class="album py-5 bg-light">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <div class="carousel card-img-top">
-                                
-                            </div>
-                        </div>
-                    </div>
+                <div id="property-display" class="row">
                 </div>
             </div>
         </div>
@@ -50,7 +43,22 @@
     
     <!-- Handlebars Templates -->
     <script id="card-template" type="text/x-handlebars-template">
-        
+        {{#each neighborhood}}
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <div class="carousel card-img-top">
+                    {{#each property}}
+                    <div>
+                        <a href="{{propertyLink}}">
+                            <img class="img-fill" src="{{imageSrc}}" alt="{{address}}">
+                            <h3 class="card-address">{{address}}</h3>
+                        </a>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        {{/each}}
     </script>
 
     <!-- External JS -->

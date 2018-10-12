@@ -12,42 +12,42 @@ var cardTemplate = Handlebars.compile(source);
 
 // Property data
 var data = {
-    "neighborhood": {
-        "ashfordPlace": {
-            "id": 1,
-            "property": [
+    neighborhood: [
+        {
+            name: "Ashford Place",
+            property: [
                 {
-                    "imageSrc": "imgs/ashford-place/18753-mcfall-drive.jpeg",
-                    "address": "18753 McFall Drive",
-                    "propertyLink": "#"
+                    imageSrc: "imgs/ashford-place/18753-mcfall-drive.jpeg",
+                    address: "18753 McFall Drive",
+                    propertyLink: "#"
                 },
                 {
-                    "imageSrc": "imgs/ashford-place/4515-andover-parkway.jpeg",
-                    "address": "4515 Andover Parkway",
-                    "propertyLink": "#"
+                    imageSrc: "imgs/ashford-place/4515-andover-parkway.jpeg",
+                    address: "4515 Andover Parkway",
+                    propertyLink: "#"
                 },
                 {
-                    "imageSrc": "imgs/ashford-place/4515-boyd-place.jpeg",
-                    "address": "4515 Boyd Place",
-                    "propertyLink": "#"
+                    imageSrc: "imgs/ashford-place/4515-boyd-place.jpeg",
+                    address: "4515 Boyd Place",
+                    propertyLink: "#"
                 }
             ]
         },
-        "ashmoor": {
-            "id": 2,
-            "property": [
+        {
+            name: "Ashmoor",
+            property: [
                 {
-                    "imageSrc": "imgs/ashmoor/3531-moorland-lane.jpeg",
-                    "address": "3531 Moorland Land",
-                    "propertyLink": "#"
+                    imageSrc: "imgs/ashmoor/3531-moorland-lane.jpeg",
+                    address: "3531 Moorland Land",
+                    propertyLink: "#"
                 }
             ]
         }
-    }
+    ]
 };
 
-// Render the data to the template
+// Render the data to the webpage
 var html = cardTemplate(data);
-var propertyContainer = document.getElementById("property-container");
+var propertyContainer = document.getElementById("property-display");
 propertyContainer.innerHTML = html;
 
