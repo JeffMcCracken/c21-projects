@@ -13,33 +13,55 @@
     <link rel="stylesheet" href="css/styles.css">
     <!-- Fonts and Favicon -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
     <link rel="icon" href="imgs/c21-favicon.png">
 </head>
 <body>
     <!-- Header -->
     <header>
-
+        <div><br></div>
     </header>
     <!-- Body -->
     <main role="main">
-        <section class="jumbotron text-center">
+        <section class="jumbotron text-center jumbotron-header">
             <div class="container">
-                <h1 class="jumbotron-heading">Move-in Ready Homes</h1>
-                <p class="lead text-muted">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus similique neque sequi voluptas reprehenderit. Sunt sequi eos omnis rerum doloribus similique facere porro dicta, repudiandae, quibusdam dolorum minus aliquam sed.
-                </p>
+                <!-- <h1 class="jumbotron-heading gold-background">Move-in Ready Homes</h1> -->
+                <div class="tagline">
+                    <h1 class="muli font-weight-bold">Quick Move-In homes ready by November 30th!</h1>
+                </div>
             </div>
         </section>
         <div class="album py-5 bg-light">
             <div class="container">
                 <div id="property-display" class="row">
+                    <!-- Handlebars renders card-template for all properties here -->
+                </div>
+                <div class="jumbotron pt-3">
+                    <h1 class="display-4 grey-text muli">Questions?</h1>
+                    <p class="pb-3 font-weight-bold grey-text barlow">Please fill out the form below, and we will get into contact with you as soon as possible!</p>
+                    <hr class="py-1">
+                    <form class="pt-3 grey-text barlow" action="https://formspree.io/jeffmccracken12@gmail.com" method="POST">
+                        <div class="form-group">  
+                            <label for="userName">Name</label>
+                            <input type="text" class="form-control" id="userName" placeholder="Your name" name="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="userEmail">Email</label>
+                            <input type="email" class="form-control" id="userEmail" placeholder="Your email" name="_replyto">
+                        </div>
+                        <div class="form-group">
+                            <label for="userMessage">Message</label>
+                            <textarea class="form-control" id="userMessage" placeholder="Your message" name="message"></textarea>
+                        </div>
+                        <input type="submit" class="btn btn-primary" value="Send">
+                    </form>
                 </div>
             </div>
         </div>
     </main>
     <!-- Footer -->
     <footer>
-
+        
     </footer>
     
     <!-- Handlebars Templates -->
@@ -47,13 +69,15 @@
         {{#each neighborhood}}
         <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
+                <h2 class="card-header">{{name}}</h2>
                 <div class="carousel card-img-top">
                     {{#each property}}
-                    <div>
-                        <a href="{{propertyLink}}">
+                    <div class="carousel-info">
+                        <a href="{{propertyLink}}" target="_blank">
                             <img class="img-fill" src="{{imageSrc}}" alt="{{address}}">
-                            <h3 class="card-address">{{address}}</h3>
+                            <h3 class="card-address">{{address}},<br>{{city}} {{zip}}</h3>
                         </a>
+                        <h3 class="card-price">Price: &#36;{{price}}</h3>
                     </div>
                     {{/each}}
                 </div>

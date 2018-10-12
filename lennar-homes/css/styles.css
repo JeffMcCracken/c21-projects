@@ -2,17 +2,88 @@
     height: 225px;
     width: 100%;
     display: block;
-    border-style: solid;
-    border-color: #252526;
+}
+
+.jumbotron-header {
+    background-image: url("../imgs/lennar-header.jpg");
+    background-size: cover;
+    height: 450px;
+}
+
+.tagline {
+    margin-top: 310px;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: rgba(37, 37, 38, 0.85);
 }
 
 .card-address {
     text-align: center;
     font-family: 'Barlow Semi Condensed', sans-serif;
     margin-top: 5px;
-    color: #A19276;
+    font-weight: bold;
+    color: #A19276; 
+}
+
+.card-price {
+    text-align: center;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    margin-top: 10px;
+    color: white;
+}
+
+.card-header {
+    text-align: center;
+    font-family: 'Muli', sans-serif;
+    font-weight: bold;
+    color: #252526;
+}
+
+.carousel-info {
+    background-color: #252526;
 }
 
 a:hover {
     text-decoration: none;
+}
+
+.slick-prev {
+    left: 5px;
+    bottom: 15px;
+    z-index: 1;
+}
+
+.slick-next {
+    right: 5px;
+    z-index: 1;
+}
+
+.card {
+    background-color: #A19276;
+}
+
+/* C21 Fonts and Colors */
+.barlow {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.muli {
+    font-family: 'Muli', sans-serif;
+}
+
+.gold-text {
+    color: #A19276;
+}
+
+.gold-background {
+    background-color: #A19276;
+}
+
+.grey-text {
+    color: #252526;
+}
+
+.grey-background {
+    background-color: #252526;
 }
