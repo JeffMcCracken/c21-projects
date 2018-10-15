@@ -1,7 +1,80 @@
+/* Making my tagline and logos responsize */
+@media only screen and (max-width: 1000px) {
+    img.c21-logo {
+        height: 38.5px; 
+        width: 143.36px;
+    }
+    
+    img.lennar-logo {
+        height: 38.5px;
+        width: 168.56px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    div.tagline {
+        margin-top: 262px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    div.tagline {
+        margin-top: 294px;
+    }
+}
+
+@media only screen and (max-width: 528px) {
+    div.tagline {
+        margin-top: 246px;
+    }
+}
+
+@media only screen and (max-width: 357px) {
+    div.tagline {
+        margin-top: 198px;
+    }
+}
+
+@media only screen and (max-width: 326px) {
+    div.tagline {
+        margin-top: 150px;
+    }
+}
+
+/* Logos */
+#company-logos {
+    height: 0px;
+}
+
+.c21-logo {
+    background: rgba(37, 37, 38, 0.85);
+    height: 80.8px; 
+    width: 286.72px;
+}
+
+.lennar-logo {
+    background: rgba(37, 37, 38, 0.85);
+    height: 72.8px;
+    width: 337.12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Randoms */
 .img-fill {
     height: 225px;
     width: 100%;
     display: block;
+}
+
+.main-bg {
+    background: #E6E7E8;
 }
 
 .jumbotron-header {
@@ -16,6 +89,11 @@
     padding-top: 10px;
     padding-bottom: 10px;
     background: rgba(37, 37, 38, 0.85);
+}
+
+/* Cards */
+.card {
+    background-color: #A19276;
 }
 
 .card-address {
@@ -40,12 +118,18 @@
     color: #252526;
 }
 
-.carousel-info {
-    background-color: #252526;
+/* Anchor tag */
+a {
+    color: #A19276;
 }
 
 a:hover {
     text-decoration: none;
+}
+
+/* Carousel */
+.carousel-info {
+    background-color: #252526;
 }
 
 .slick-prev {
@@ -57,10 +141,6 @@ a:hover {
 .slick-next {
     right: 5px;
     z-index: 1;
-}
-
-.card {
-    background-color: #A19276;
 }
 
 /* C21 Fonts and Colors */
