@@ -1,5 +1,5 @@
 /* Making my tagline and logos responsize */
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1113px) {
     img.c21-logo {
         height: 38.5px; 
         width: 143.36px;
@@ -15,7 +15,18 @@
     }
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 790px) {
+    h1.headline {
+        font-size: 40px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 120px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
     div.tagline {
         margin-top: 262px;
     }
@@ -27,25 +38,50 @@
     }
 }
 
-@media only screen and (max-width: 528px) {
+@media only screen and (max-width: 583px) {
+    h1.headline {
+        font-size: 20px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-left: 7px;
+        padding-right: 7px;
+        height: 60px;
+    }
+
+    img.c21-logo {
+        height: 19.25px; 
+        width: 71.68px;
+    }
+    
+    img.lennar-logo {
+        height: 19.25px;
+        width: 89.28px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+@media only screen and (max-width: 398px) {
     div.tagline {
         margin-top: 246px;
     }
 }
 
-@media only screen and (max-width: 357px) {
+@media only screen and (max-width: 334px) {
     div.tagline {
         margin-top: 198px;
     }
 }
 
-@media only screen and (max-width: 326px) {
+@media only screen and (max-width: 264px) {
     div.tagline {
         margin-top: 150px;
     }
 }
 
-/* Logos */
+/* Logos and headline */
 #company-logos {
     height: 0px;
 }
@@ -64,6 +100,17 @@
     padding-bottom: 20px;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.headline {
+    background: rgba(190, 175, 135, 0.85);
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 70px;
+    height: 215px;
 }
 
 /* Randoms */
