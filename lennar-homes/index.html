@@ -67,15 +67,19 @@
                     <form class="grey-text barlow" action="https://formspree.io/information@c21scheetz.com" method="POST">
                         <div class="form-group">  
                             <label class="font-weight-bold" style="color: white;" for="userName">Name</label>
-                            <input type="text" class="form-control" id="userName" placeholder="Your name" name="name">
+                            <input type="text" class="form-control" id="userName" placeholder="Your name" name="name" required>
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" style="color: white;" for="userEmail">Email</label>
-                            <input type="email" class="form-control" id="userEmail" placeholder="Your email" name="email">
+                            <input type="email" class="form-control" id="userEmail" placeholder="Your email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-weight-bold" style="color: white;" for="userPhone">Phone Number</label>
+                            <input type="tel" class="form-control" id="userPhone" placeholder="Your phone number" name="phone-number" required>
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" style="color: white;" for="userMessage">Message</label>
-                            <textarea class="form-control" id="userMessage" placeholder="Your message" name="message"></textarea>
+                            <textarea class="form-control" id="userMessage" placeholder="Your message" name="message" required></textarea>
                         </div>
                         <input type="submit" class="btn gold-background" value="Send">
                     </form>
