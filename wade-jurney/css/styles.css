@@ -1,0 +1,57 @@
+/* Cards */
+.card {
+    background-color: #A19276;
+}
+
+.card-address {
+    text-align: center;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    margin-top: 5px;
+    font-weight: bold;
+    color: #A19276; 
+}
+
+.card-price {
+    text-align: center;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    margin-top: 10px;
+    color: white;
+}
+
+.card-body {
+    background-color: #252526;
+}
+
+/* Anchor tag */
+a {
+    color: #A19276;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* C21 Fonts and Colors */
+.barlow {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.muli {
+    font-family: 'Muli', sans-serif;
+}
+
+.gold-text {
+    color: #A19276;
+}
+
+.gold-background {
+    background-color: #A19276;
+}
+
+.grey-text {
+    color: #252526;
+}
+
+.grey-background {
+    background-color: #252526;
+}
