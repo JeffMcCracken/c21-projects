@@ -20,6 +20,32 @@
 
 .card-body {
     background-color: #252526;
+    padding-bottom: 0px;
+}
+
+/* Carousel */
+.slick-prev {
+    left: 5px;
+    bottom: 15px;
+    z-index: 1;
+}
+
+.slick-next {
+    right: 5px;
+    z-index: 1;
+}
+
+/* Buttons */
+.btn-expand {
+    margin-top: 25px;
+    background: #A19276;
+    border-radius: 0;
+    border-color: #A19276;
+    color: white;
+}
+
+.btn-light:hover {
+    background: #A19276;
 }
 
 /* Anchor tag */
@@ -29,6 +55,43 @@ a {
 
 a:hover {
     text-decoration: none;
+    color: white;
+}
+
+/* Randoms */
+.img-fill {
+    height: 250px;
+    width: 100%;
+    display: block;
+    background: #252526;
+}
+
+.layout-img {
+    height: 250px;
+    display: block;
+    background: #252526;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.layout-header {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: #252526;
+    color: #A19276;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.layout-header-content {
+    font-family: 'Muli', sans-serif;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.jumbotron {
+    border-radius: 0px;
 }
 
 /* C21 Fonts and Colors */

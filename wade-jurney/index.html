@@ -8,6 +8,8 @@
     <!-- External Styling -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- Internal Styling -->
+    <link rel="stylesheet" href="utils/slick/slick.css"/>
+    <link rel="stylesheet" href="utils/slick/slick-theme.css"/>
     <link rel="stylesheet" href="css/styles.css">
     <!-- Fonts and Favicon -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed">
@@ -18,16 +20,12 @@
     <!-- Header -->
     <header>
         <div style="background-color: black;"><br></div>
-        <section class="jumbotron text-center">
-            <div class="container">
-                <h1 class="muli font-weight-bold">Wade Jurney</h1>
-            </div>
-        </section>
+        <div class="jumbotron text-center">
+            
+        </div>
         <div class="container">
             <div class="row pb-4">
                 <div class="col text-center">
-                    <h2 class="muli font-weight-bold">Can't find the perfect home? We've got you covered!</h2>
-                    <h2 class="muli font-weight-bold gold-text">New - Ready - Now</h2>
                     <hr class="my-4">
                     <h5 class="muli pb-0 mb-0 font-italic"><a href="mailto:information@c21scheetz.com">information@c21scheetz.com</a></h5>
                     <h5 class="muli pt-0 mt-0 font-italic"><a href="tel:3178145525">317-814-5525</a></h5>
@@ -80,26 +78,38 @@
 
     <!-- Handlebars Template -->
     <script id="card-template" type="text/x-handlebars-template">
-        {{#each layout}}
-        <div class="header">
-            <h1>{{name}}</h1>
-        </div>
-        {{#each property}}
+        {{#each model}}
         <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
-                <div class="carousel card-img-top">
-                    <div class="card-body">
+                <div class="carousel">
+                    <div><img class="img-fill" src="{{stockImg}}" alt="{{name}}"></div>
+                    {{#if realImg}}
+                    <div><img class="img-fill" src="{{realImg}}" alt="{{name}}"></div>
+                    {{/if}}
+                    <div><img class="layout-img" src="{{layoutImg}}" alt="{{name}}"></div>
+                    {{#if layoutTwoImg}}
+                    <div><img class="layout-img" src="{{layoutTwoImg}}" alt="{{name}}"></div>
+                    {{/if}}
+                </div>
+                <div class="card-body">
+                    <h3 class="card-address">{{name}}</h3>
+                    <h4 class="card-price">{{squareFeet}} sqft &bull; {{numGarage}} Car Garage</h4>
+                    <h4 class="card-price">{{numBed}} Beds &bull; {{numBath}} Baths</h4>
+                    <p style="font-family: 'Muli', sans-serif;">
+                        <button class="btn btn-light btn-block btn-expand" type="button" data-toggle="collapse" data-target="#listingCollapse{{@index}}" aria-expanded="false" aria-controls="listingCollapse{{@index}}">
+                            See available listings
+                        </button>
+                    </p>
+                    <div class="collapse gold-text" id="listingCollapse{{@index}}">
+                    {{#each property}}
                         <a href="{{link}}" target="_blank">
-                            <img class="img-fill" src="{{imgSrc}}" alt="{{address}}">
-                            <h3 class="card-address">{{address}},<br>{{city}} {{zip}}</h3>
+                            <p>{{address}},{{city}} {{zip}} &bull; Price: &#36;{{price}}</p>
                         </a>
-                        <h3 class="card-price">Price: &#36;{{price}}</h3>
+                    {{/each}}
                     </div>
-                    
                 </div>
             </div>
         </div>
-        {{/each}}
         {{/each}}
     </script>
 
@@ -109,6 +119,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <!-- Internal JS -->
     <script src="utils/handlebars-v4.0.12.js"></script>
+    <script src="utils/slick/slick.min.js"></script>
     <script src="utils/wade_jurney.js"></script>
 </body>
 </html>
