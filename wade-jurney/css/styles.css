@@ -1,3 +1,16 @@
+/* Media Breakpoints */
+@media (max-width: 430px) {
+    .card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 80%;
+    }
+}
+
 /* Cards */
 .card {
     background-color: #A19276;
@@ -62,7 +75,7 @@ a {
 
 a:hover {
     text-decoration: none;
-    color: white;
+    color: grey;
 }
 
 /* Randoms */
@@ -81,24 +94,23 @@ a:hover {
     margin-right: auto;
 }
 
-.layout-header {
-    display: block;
-    width: 100%;
-    text-align: center;
-    background: #252526;
-    color: #A19276;
-    margin-bottom: 15px;
-    border-radius: 5px;
-}
-
-.layout-header-content {
-    font-family: 'Muli', sans-serif;
-    font-size: 50px;
-    font-weight: bolder;
-}
-
 .jumbotron {
     border-radius: 0px;
+}
+
+.jumbotron-header {
+    background: url("../imgs/cover-photo.jpg") no-repeat;
+    background-size: 100%;
+    height: 450px;
+}
+
+.cover-photo {
+    width: 100%;
+}
+
+.contact-area {
+    background: white;
+    border: 0px;
 }
 
 .property-link {

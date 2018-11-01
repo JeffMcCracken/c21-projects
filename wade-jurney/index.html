@@ -20,8 +20,31 @@
     <!-- Header -->
     <header>
         <div style="background-color: black;"><br></div>
-        <div class="jumbotron text-center">
-            
+        <img class="cover-photo" src="imgs/cover-photo.jpg" alt="cover-photo">
+        <div class="container py-3">
+            <div class="card contact-area">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img src="imgs/liz-micheal.jpg" class="w-100">
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card-block">
+                            <h4 class="card-title">Lorem ipsum dolor sit amet</h4>
+                            <p class="card-text">Consectetur</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-3">
+                        <div class="card-block">
+                            <h4 class="card-title">Lorem ipsum dolor sit amet</h4>
+                            <p class="card-text">Consectetur</p>
+                        </div>
+                    </div>    
+                    <div class="col-md-2">
+                        <img src="imgs/honesty-hart.jpg" class="w-100">
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="container">
             <div class="row pb-4">
@@ -79,8 +102,8 @@
     <!-- Handlebars Template -->
     <script id="card-template" type="text/x-handlebars-template">
         {{#each model}}
-        <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
+        <div class="col-lg-4 col-md-6">
+            <div class="card mx-auto mb-4 shadow-sm">
                 <div class="carousel">
                     <div><img class="img-fill" src="{{stockImg}}" alt="{{name}}"></div>
                     {{#if realImg}}
@@ -104,14 +127,14 @@
                     {{#each property}}
                         <a href="{{link}}" target="_blank">
                             <button class="muli btn btn-light btn-block btn-property" type="button">
-                                <h4 class='text-center mb-0 pb-0'>{{city}} {{zip}}</h4>
+                                <h4 class='text-center mb-0 pb-0'>{{city}}</h4>
                                 <hr class='m-0 p-0'>
                                 <div class="mt-2 d-flex justify-content-between">
                                     <div>
                                         <p class='mb-0 pb-0 text-left'>{{address}}</p>
                                     </div>
                                     <div>
-                                        <p class='mb-0 pb-0 text-right'>Price: &#36;{{price}}</p>
+                                        <p class='mb-0 pb-0 text-right'>&#36;{{price}}</p>
                                     </div>
                                 </div>
                             </button>
