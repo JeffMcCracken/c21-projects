@@ -95,15 +95,26 @@
                     <h3 class="card-address">{{name}}</h3>
                     <h4 class="card-price">{{squareFeet}} sqft &bull; {{numGarage}} Car Garage</h4>
                     <h4 class="card-price">{{numBed}} Beds &bull; {{numBath}} Baths</h4>
-                    <p style="font-family: 'Muli', sans-serif;">
+                    <div class="barlow">
                         <button class="btn btn-light btn-block btn-expand" type="button" data-toggle="collapse" data-target="#listingCollapse{{@index}}" aria-expanded="false" aria-controls="listingCollapse{{@index}}">
                             See available listings
                         </button>
-                    </p>
+                    </div>
                     <div class="collapse gold-text" id="listingCollapse{{@index}}">
                     {{#each property}}
                         <a href="{{link}}" target="_blank">
-                            <p>{{address}},{{city}} {{zip}} &bull; Price: &#36;{{price}}</p>
+                            <button class="muli btn btn-light btn-block btn-property" type="button">
+                                <h4 class='text-center mb-0 pb-0'>{{city}} {{zip}}</h4>
+                                <hr class='m-0 p-0'>
+                                <div class="mt-2 d-flex justify-content-between">
+                                    <div>
+                                        <p class='mb-0 pb-0 text-left'>{{address}}</p>
+                                    </div>
+                                    <div>
+                                        <p class='mb-0 pb-0 text-right'>Price: &#36;{{price}}</p>
+                                    </div>
+                                </div>
+                            </button>
                         </a>
                     {{/each}}
                     </div>
