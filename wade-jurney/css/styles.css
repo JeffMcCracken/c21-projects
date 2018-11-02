@@ -3,9 +3,38 @@
     .card {
         width: 100%;
     }
+
+    div.contact-text {
+        font-size: 50%;
+    }
+
+    h2.contact-header {
+        font-size: 300%;
+    }
+
+    h5.contact-header {
+        font-size: 200%;
+    }
+
+    img.contact-photo {
+        width: 90px !important;
+        height: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    img.contact-photo {
+        width: 120px;
+        height: 100%;
+    }
 }
 
 @media (max-width: 768px) {
+    .tagline {
+        font-size: 9vw !important;
+        white-space: normal;
+    }
+
     .card {
         width: 80%;
     }
@@ -33,6 +62,11 @@
 
 .card-body {
     background-color: #252526;
+}
+
+.contact-photo {
+    width: 150px;
+    height: 100%;
 }
 
 /* Carousel */
@@ -75,7 +109,7 @@ a {
 
 a:hover {
     text-decoration: none;
-    color: grey;
+    color: #E6E7E8;
 }
 
 /* Randoms */
@@ -109,13 +143,18 @@ a:hover {
 }
 
 .contact-area {
-    background: white;
+    background: #E6E7E8;
     border: 0px;
 }
 
 .property-link {
     background: #A19276;
     border: 2px solid #A19276;
+}
+
+.tagline {
+    font-size: 4.2vw;
+    letter-spacing: 0.2rem;
 }
 
 /* C21 Fonts and Colors */
@@ -141,4 +180,12 @@ a:hover {
 
 .grey-background {
     background-color: #252526;
+}
+
+.light-grey-text {
+    color: #E6E7E8;
+}
+
+.light-grey-background {
+    background-color: #E6E7E8;
 }
