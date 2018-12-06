@@ -5,6 +5,16 @@ $(document).ready(function(){
     });
 });
 
+// Add event tracking
+function linkEvent(eventLabel) {
+    ga('send', 'event', {
+        eventCategory: 'Outbound Link',
+        eventAction: 'click',
+        eventLabel: eventLabel,
+        transport: 'beacon'
+    })
+}
+
 // Handlebars setup
 var source = document.getElementById("card-template").innerHTML;
 var cardTemplate = Handlebars.compile(source);
