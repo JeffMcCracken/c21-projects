@@ -4,11 +4,30 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130595673-1"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    gtag('config', 'UA-130595673-1');
+        gtag('config', 'UA-130595673-1');
+    </script>
+    <script>
+        // Add event tracking
+        function linkEvent(myEventLabel) {
+            ga('send', 'event', {
+                eventCategory: 'Outbound Link',
+                eventAction: 'click',
+                eventLabel: myEventLabel,
+                transport: 'beacon'
+            });
+        }
+
+        function buttonEvent(myEventLabel) {
+            ga('send', 'event', {
+                eventCategory: 'See More Listings',
+                eventAction: 'click',
+                eventLabel: myEventLabel
+            });
+        }
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

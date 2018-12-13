@@ -5,16 +5,6 @@ $(document).ready(function(){
     });
 });
 
-// Add event tracking
-function linkEvent(eventLabel) {
-    ga('send', 'event', {
-        eventCategory: 'Outbound Link',
-        eventAction: 'click',
-        eventLabel: eventLabel,
-        transport: 'beacon'
-    })
-}
-
 // Handlebars setup
 var source = document.getElementById("card-template").innerHTML;
 var cardTemplate = Handlebars.compile(source);
@@ -36,14 +26,14 @@ var data = {model:
                 address: '342 W 300 N',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '114,990',
+                price: '109,990',
                 link: 'https://www.century21.com/property/342-W-300-N-Kokomo-IN-46901/94637631/detail'
             },
             {
                 address: '432 W 300 N',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '121,990',
+                price: '109,990',
                 link: 'https://www.century21.com/property/432-W-300-N-Kokomo-IN-46901/94867907/detail'
             }
         ]
@@ -63,7 +53,7 @@ var data = {model:
                 address: '366 W 300 N',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '115,990',
+                price: '112,990',
                 link: 'https://www.century21.com/property/366-W-300-N-Kokomo-IN-46901/94637619/detail'
             }
         ]
@@ -83,14 +73,14 @@ var data = {model:
                 address: '320 W 300 N',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '124,990',
+                price: '119,990',
                 link: 'https://www.century21.com/property/320-W-300-N-Kokomo-IN-46901/94636817/detail'
             },
             {
                 address: '116 W 300 N',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '131,990',
+                price: '119,990',
                 link: 'https://www.century21.com/property/116-W-300-N-Kokomo-IN-46901/94867191/detail'
             }
         ]
@@ -110,14 +100,14 @@ var data = {model:
                 address: '378 W 300 N',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '124,990',
+                price: '122,990',
                 link: 'https://www.century21.com/property/378-W-300-N-Kokomo-IN-46901/94637607/detail'
             },
             {
                 address: '452 W 300 N',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '133,990',
+                price: '122,990',
                 link: 'https://www.century21.com/property/452-W-300-N-Kokomo-IN-46901/94869073/detail'
             }
         ]
@@ -137,28 +127,28 @@ var data = {model:
                 address: '216 Luke Court',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '133,490',
+                price: '125,490',
                 link: 'https://www.century21.com/property/216-Luke-Ct-Kokomo-IN-46901/29031955/detail'
             },
             {
                 address: '364 Ariel Drive',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '132,490',
+                price: '125,490',
                 link: 'https://www.century21.com/property/364-Ariel-Dr-Kokomo-IN-46901/94637617/detail'
             },
             {
                 address: '402 Ariel Drive',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '139,490',
+                price: '125,490',
                 link: 'https://www.century21.com/property/402-Ariel-Dr-Kokomo-IN-46901/94875485/detail'
             },
             {
                 address: '1106 Oregon Way',
                 city: 'Anderson',
                 zip: '46011',
-                price: '137,490',
+                price: '127,490',
                 link: 'https://www.century21.com/property/1106-Oregon-Way-Anderson-IN-46012/94641207/detail'
             }
         ]
@@ -178,28 +168,28 @@ var data = {model:
                 address: '211 Ariel Court',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '133,490',
+                price: '127,990',
                 link: 'https://www.century21.com/property/211-Ariel-Ct-Kokomo-IN-46901/94637611/detail'
             },
             {
                 address: '391 Ariel Drive',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '141,490',
+                price: '127,990',
                 link: 'https://www.century21.com/property/391-Ariel-Dr-Kokomo-IN-46901/94875495/detail'
             },
             {
                 address: '1307 Oregon Way',
                 city: 'Anderson',
                 zip: '46011',
-                price: '139,490',
+                price: '129,490',
                 link: 'https://www.century21.com/property/1307-Oregon-Way-Anderson-IN-46012/94641211/detail'
             },
             {
                 address: '1001 Oregon Way',
                 city: 'Anderson',
                 zip: '46011',
-                price: '139,490',
+                price: '129,490',
                 link: 'https://www.century21.com/property/1001-Oregon-Way-Anderson-IN-46012/94641209/detail'
             }
         ]
@@ -219,49 +209,49 @@ var data = {model:
                 address: '204 Luke Court',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '139,490',
+                price: '129,490',
                 link: 'https://www.century21.com/property/204-Luke-Ct-Kokomo-IN-46901/29031958/detail'
             },
             {
                 address: '219 Ariel Court',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '137,490',
+                price: '129,490',
                 link: 'https://www.century21.com/property/219-Ariel-Ct-Kokomo-IN-46901/94638209/detail'
             },
             {
                 address: '232 Luke Court',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '139,490',
+                price: '129,490',
                 link: 'https://www.century21.com/property/232-Luke-Ct-Kokomo-IN-46901/94638211/detail'
             },
             {
                 address: '387 Ariel Drive',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '137,490',
+                price: '129,490',
                 link: 'https://www.century21.com/property/387-Ariel-Dr-Kokomo-IN-46901/94637629/detail'
             },
             {
                 address: '1118 Oregon Way',
                 city: 'Anderson',
                 zip: '46011',
-                price: '147,490',
+                price: '137,490',
                 link: 'https://www.century21.com/property/1118-Oregon-Way-Anderson-IN-46012/94644309/detail'
             },
             {
                 address: '3314 Nevada Dr',
                 city: 'Anderson',
                 zip: '46011',
-                price: '147,490',
+                price: '137,490',
                 link: 'https://www.century21.com/property/3314-Nevada-Drive-Anderson-IN-46011/M-21603834-IN_MIBOR/detail'
             },
             {
                 address: '1226 S Rangeline Rd',
                 city: 'Anderson',
                 zip: '46011',
-                price: '149,990',
+                price: '137,990',
                 link: 'https://www.century21.com/property/1226-South-Rangeline-Road-Anderson-IN-46011/M-21603827-IN_MIBOR/detail'
             }
         ]
@@ -280,14 +270,14 @@ var data = {model:
                 address: '401 Ariel Drive',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '151,490',
+                price: '131,990',
                 link: 'https://www.century21.com/property/401-Ariel-Dr-Kokomo-IN-46901/94869025/detail'
             },
             {
                 address: '1105 Oregon Way',
                 city: 'Anderson',
                 zip: '46011',
-                price: '147,990',
+                price: '139,990',
                 link: 'https://www.century21.com/property/1105-Oregon-Way-Anderson-IN-46012/94644315/detail'
             }
         ]
@@ -308,21 +298,21 @@ var data = {model:
                 address: '1123 Oregon Way',
                 city: 'Anderson',
                 zip: '46011',
-                price: '152,490',
+                price: '142,490',
                 link: 'https://www.century21.com/property/1123-Oregon-Way-Anderson-IN-46012/94649751/detail'
             },
             {
                 address: '1007 Oregon Way',
                 city: 'Anderson',
                 zip: '46011',
-                price: '154,490',
+                price: '143,490',
                 link: 'https://www.century21.com/property/1007-Oregon-Way-Anderson-IN-46012/94644317/detail'
             },
             {
                 address: '1301 Oregon Way',
                 city: 'Anderson',
                 zip: '46011',
-                price: '153,490',
+                price: '143,490',
                 link: 'https://www.century21.com/property/1301-Oregon-Way-Anderson-IN-46012/94872853/detail'
             }
         ]
@@ -342,7 +332,7 @@ var data = {model:
                 address: '1112 Oregon Way',
                 city: 'Anderson',
                 zip: '46011',
-                price: '156,490',
+                price: '144,490',
                 link: 'https://www.century21.com/property/1112-Oregon-Way-Anderson-IN-46012/94649753/detail'
             }
         ]
@@ -363,21 +353,21 @@ var data = {model:
                 address: '274 W 300 N',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '143,990',
+                price: '139,490',
                 link: 'https://www.century21.com/property/274-W-300-N-Kokomo-IN-46901/94636815/detail'
             },
             {
                 address: '354 W 300 N',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '143,990',
+                price: '139,490',
                 link: 'https://www.century21.com/property/354-W-300-N-Kokomo-IN-46901/94637679/detail'
             },
             {
                 address: '386 W 300 N',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '$152,990',
+                price: '$139,490',
                 link: 'https://www.century21.com/property/386-W-300-N-Kokomo-IN-46901/94867903/detail'
             }
         ]
@@ -397,7 +387,7 @@ var data = {model:
                 address: '440 W 300 N',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '154,990',
+                price: '141,990',
                 link: 'https://www.century21.com/property/440-W-300-N-Kokomo-IN-46901/94869019/detail'
             }
         ]
@@ -418,42 +408,42 @@ var data = {model:
                 address: '207 Ariel Court',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '155,490',
+                price: '142,490',
                 link: 'https://www.century21.com/property/207-Ariel-Ct-Kokomo-IN-46901/94638215/detail'
             },
             {
                 address: '220 Luke Court',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '157,490',
+                price: '142,490',
                 link: 'https://www.century21.com/property/220-Luke-Ct-Kokomo-IN-46901/29031954/detail'
             },
             {
                 address: '363 Ariel Drive',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '155,490',
+                price: '142,490',
                 link: 'https://www.century21.com/property/363-Ariel-Dr-Kokomo-IN-46901/94638217/detail'
             },
             {
                 address: '1204 Oregon Way',
                 city: 'Anderson',
                 zip: '46011',
-                price: '159,490',
+                price: '149,490',
                 link: 'https://www.century21.com/property/1204-Oregon-Way-Anderson-IN-46012/94649757/detail'
             },
             {
                 address: '1002 Oregon Way',
                 city: 'Anderson',
                 zip: '46011',
-                price: '161,490',
+                price: '149,990',
                 link: 'https://www.century21.com/property/1002-Oregon-Way-Anderson-IN-46012/94649755/detail'
             },
             {
                 address: '1302 S Rangeline Rd',
                 city: 'Anderson',
                 zip: '46011',
-                price: '159,990',
+                price: '149,990',
                 link: 'https://www.century21.com/property/1302-South-Rangeline-Road-Anderson-IN-46011/M-21603201-IN_MIBOR/detail'
             }
         ]
@@ -471,31 +461,24 @@ var data = {model:
         layoutTwoImg: 'imgs/models/1802-b-layout-two.jpg',
         property: [
             {
-                address: '197 Luke Court',
-                city: 'Kokomo',
-                zip: '46901',
-                price: '159,490',
-                link: 'https://www.century21.com/property/197-Luke-Ct-Kokomo-IN-46901/29031960/detail'
-            },
-            {
                 address: '395 Ariel Drive',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '165,490',
+                price: '145,990',
                 link: 'https://www.century21.com/property/395-Ariel-Dr-Kokomo-IN-46901/94875497/detail'
             },
             {
                 address: '1111 Oregon Way',
                 city: 'Anderson',
                 zip: '46011',
-                price: '163,490',
+                price: '151,490',
                 link: 'https://www.century21.com/property/1111-Oregon-Way-Anderson-IN-46012/94649763/detail'
             },
             {
                 address: '1313 Oregon Way',
                 city: 'Anderson',
                 zip: '46011',
-                price: '163,990',
+                price: '151,990',
                 link: 'https://www.century21.com/property/1313-Oregon-Way-Anderson-IN-46012/94649759/detail'
             }
         ]
@@ -515,7 +498,7 @@ var data = {model:
                 address: '460 W 300 N',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '155,990',
+                price: '142,990',
                 link: 'https://www.century21.com/property/460-W-300-N-Kokomo-IN-46901/94967341/detail'
             }
         ]
@@ -535,7 +518,7 @@ var data = {model:
                 address: '126 W 300 N',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '157,990',
+                price: '145,490',
                 link: 'https://www.century21.com/property/126-W-300-N-Kokomo-IN-46901/94967349/detail'
             }
         ]
@@ -555,14 +538,14 @@ var data = {model:
                 address: '205 Luke Court',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '164,490',
+                price: '149,490',
                 link: 'https://www.century21.com/property/205-Luke-Ct-Kokomo-IN-46901/29031964/detail'
             },
             {
                 address: '379 Ariel Drive',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '159,490',
+                price: '149,490',
                 link: 'https://www.century21.com/property/379-Ariel-Dr-Kokomo-IN-46901/94638213/detail'
             },
             ,
@@ -570,21 +553,21 @@ var data = {model:
                 address: '392 Ariel Drive',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '170,490',
+                price: '149,490',
                 link: 'https://www.century21.com/property/392-Ariel-Dr-Kokomo-IN-46901/94875469/detail'
             },
             {
                 address: '1302 Oregon Way',
                 city: 'Anderson',
                 zip: '46011',
-                price: '166,490',
+                price: '156,490',
                 link: 'https://www.century21.com/property/1302-Oregon-Way-Anderson-IN-46012/94872867/detail'
             },
             {
                 address: '1008 Oregon Way',
                 city: 'Anderson',
                 zip: '46011',
-                price: '168,490',
+                price: '156,490',
                 link: 'https://www.century21.com/property/1008-Oregon-Way-Anderson-IN-46012/94649765/detail'
             }
         ]
@@ -604,14 +587,14 @@ var data = {model:
                 address: '221 Luke Court',
                 city: 'Kokomo',
                 zip: '46901',
-                price: '172,490',
+                price: '151,990',
                 link: 'https://www.century21.com/property/221-Luke-Ct-Kokomo-IN-46901/94875479/detail'
             },
             {
                 address: '1117 Oregon Way',
                 city: 'Anderson',
                 zip: '46011',
-                price: '170,490',
+                price: '158,490',
                 link: 'https://www.century21.com/property/1117-Oregon-Way-Anderson-IN-46012/94649761/detail'
             }
         ]
