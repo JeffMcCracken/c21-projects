@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130595673-1"></script>
+    <!-- Google Analytics -->
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-130595673-1');
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        
+        ga('create', 'UA-130595673-1', 'auto');
+        ga('send', 'pageview');
     </script>
+    <!-- End Google Analytics -->
     <script>
-        // Add event tracking
-        function linkEvent(myEventLabel) {
-            ga('send', 'event', {
-                eventCategory: 'Outbound Link',
-                eventAction: 'click',
-                eventLabel: myEventLabel,
-                transport: 'beacon'
-            });
+        // See available listings tracking
+        function seeMoreEvent(eventLabel) {
+            console.log(eventLabel);
+            ga('send', 'event', 'See Available Listings', 'click', eventLabel);
         }
-
-        function buttonEvent(myEventLabel) {
-            ga('send', 'event', {
-                eventCategory: 'See More Listings',
-                eventAction: 'click',
-                eventLabel: myEventLabel
-            });
+        // Outbound links tracking
+        function linkEvent(eventLabel) {
+            console.log(eventLabel);
+            ga('send', 'event', 'Outbound Link', 'click', eventLabel, {
+                'transport': 'beacon'});
+        }
+        // Send Contact form
+        function contactEvent(eventLabel) {
+            console.log(eventLabel);
+            ga('send', 'event', 'Contact Us', 'click', eventLabel)
         }
     </script>
     <meta charset="UTF-8">
@@ -52,17 +53,17 @@
         <div class="light-grey-background">
             <div class="container py-3 barlow">
                 <div class="barlow btn-expand mb-3 text-center">
-                    <h1 class="tagline pb-2">Who is Wade Jurney Homes?</h1>
+                    <h1 class="tagline pb-2">$1500 Agent Bonus</h1>
                 </div>
                 <div class="grey-text">
-                    <p class="text-justify">CENTURY 21 Scheetz is proud to introduce Wade Jurney Homes to the Indiana Market Place. Wade Jurney Homes is the #1 fastest growing private home builder in the country, with over 200 communities. WJH are affordable, functional and reliable and their innovative Buy Now option simplifies buying a home in 3 easy steps. WJH offers a Zero Money Down program, excellent for first time home buyers. No negotiations on price or options enables WJH to provide the most square footage of a home for the least amount of money, guaranteed.</p>
+                    <p class="text-justify">Wade Jurney Homes is the #1 fastest growing private home builder in the country, with over 200 communities. WJH are affordable, functional and reliable and their innovative Buy Now option simplifies buying a home in 3 easy steps. WJH offers a $95.00 Down program, excellent for first time home buyers. No negotiations on price or options, enables WJH to provide the most square footage of a home for the least amount of money, guaranteed.</p>
                 </div>
                 <div class="row mt-5">
                     <div class="col-md-6">
                         <div class="card mx-auto my-2">
                             <div class="card-body">
                                 <h1 class="card-title text-center gold-text">ABBY PLACE – KOKOMO, IN</h1>
-                                <p class="card-text text-justify light-grey-text">Abby Place is located in Howard County, on the North side of Kokomo, IN. Wade Jurney Homes is offering 11 different floor plans in Abby Place. Brand New Homes ranging from 1000 to 2000 Sq. Ft, from $115,000 to $172,000. Homes can be ready by the Holiday!</p>
+                                <p class="card-text text-justify light-grey-text">Abby Place is located in Howard County, on the North side of Kokomo, IN. Wade Jurney Homes is offering 11 different floor plans in Abby Place. Brand New Homes ranging from 1000 to 2000 Sq. Ft, from $115,000 to $172,000.<br>&nbsp;</p>
                                 <hr style="border-color: #E6E7E8">
                                 <div class="d-flex justify-content-center">
                                     <img src="imgs/liz-micheal.jpg" class="contact-photo mr-4 d-inline-block">
@@ -85,7 +86,7 @@
                                 <div class="d-flex justify-content-center">
                                     <img src="imgs/honesty-hart.jpg" class="contact-photo mr-4 d-inline-block">
                                     <div class="d-inline-block contact-text">
-                                        <h2 onclick="linkEvent('Test Event')" class="light-grey-text contact-header">Honesty Hart</h2>
+                                        <h2 class="light-grey-text contact-header">Honesty Hart</h2>
                                         <h5 class="light-grey-text contact-header">Listing Agent</h5>
                                         <p class="card-text mb-0 pb-0"><a href="tel:3174322779">317-432-2779</a></p>
                                         <p class="card-text mt-0 pt-0"><a href="mailto:hhart@c21scheetz.com">hhart@c21scheetz.com</a></p>
@@ -94,13 +95,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row mt-4">
-                        <div class="col-md-4">
-                            <img src="imgs/milestone.png" class="w-100">
-                        </div>
-                        <div class="col-md-8 my-auto">
-                            <p class="text-justify mx-3">Using our approved lender, you will receive a $1500 - $2500 lender credit & $1500 - $2500 WJH credit toward closing costs. All homes must be purchased through our website www.wadejurneyhomes.com. Haggle free pricing. No negotiation necessary. Lowest price guaranteed. Please call <a href="tel:3173433108">317-343-3108</a> for more info in regard to mortgage!</p>
-                        </div>
+                    <div class="row mt-5 mx-2">
+                        <p class="text-justify mx-3">Using our approved lender, you will receive a $1500 lender credit toward closing costs. All homes must be purchased through our website www.wadejurneyhomes.com. Haggle free pricing. No negotiation necessary. Lowest price guaranteed.</p>
                     </div>
                 </div>
             </div>
@@ -143,7 +139,7 @@
                             <label class="font-weight-bold" style="color: white;" for="userMessage">Message</label>
                             <textarea class="form-control" id="userMessage" placeholder="Your message" name="message" rows="5" required></textarea>
                         </div>
-                        <input type="submit" class="btn gold-background" value="Send">
+                        <input onclick="contactEvent('Send Contact Me');" type="submit" class="btn gold-background" value="Send">
                     </form>
                 </div>
             </div>
@@ -156,27 +152,36 @@
         <div class="col-lg-4 col-md-6">
             <div class="card mx-auto mb-4 shadow-sm">
                 <div class="carousel">
-                    <div><img class="img-fill" src="{{stockImg}}" alt="{{name}}"></div>
+                    <div><img class="img-fill" src="{{stockImg}}" alt="{{squareFeet}} {{name}}"></div>
                     {{#if realImg}}
-                    <div><img class="img-fill" src="{{realImg}}" alt="{{name}}"></div>
+                    <div><img class="img-fill" src="{{realImg}}" alt="{{squareFeet}} {{name}}"></div>
                     {{/if}}
-                    <div><img class="layout-img" src="{{layoutImg}}" alt="{{name}}"></div>
+                    <div><img class="layout-img" src="{{layoutImg}}" alt="{{squareFeet}} {{name}}"></div>
                     {{#if layoutTwoImg}}
-                    <div><img class="layout-img" src="{{layoutTwoImg}}" alt="{{name}}"></div>
+                    <div><img class="layout-img" src="{{layoutTwoImg}}" alt="{{squareFeet}} {{name}}"></div>
+                    {{/if}}
+                    {{#if kitchenImg}}
+                    <div><img class="layout-img" src="{{kitchenImg}}" alt="{{squareFeet}} {{name}}"></div>
+                    {{/if}}
+                    {{#if bedroomImg}}
+                    <div><img class="layout-img" src="{{bedroomImg}}" alt="{{squareFeet}} {{name}}"></div>
+                    {{/if}}
+                    {{#if bathroomImg}}
+                    <div><img class="layout-img" src="{{bathroomImg}}" alt="{{squareFeet}} {{name}}"></div>
                     {{/if}}
                 </div>
                 <div class="card-body">
-                    <h3 class="card-address">{{name}}</h3>
+                    <h3 class="card-address">{{squareFeet}} {{name}}</h3>
                     <h4 class="card-price">{{squareFeet}} sqft &bull; {{numGarage}} Car Garage</h4>
                     <h4 class="card-price">{{numBed}} Beds &bull; {{numBath}} Baths</h4>
                     <div class="barlow">
-                        <button class="btn btn-light btn-block btn-expand" type="button" data-toggle="collapse" data-target="#listingCollapse{{@index}}" aria-expanded="false" aria-controls="listingCollapse{{@index}}">
+                        <button onclick="seeMoreEvent('{{squareFeet}} {{name}}');" class="btn btn-light btn-block btn-expand" type="button" data-toggle="collapse" data-target="#listingCollapse{{@index}}" aria-expanded="false" aria-controls="listingCollapse{{@index}}">
                             See available listings
                         </button>
                     </div>
                     <div class="collapse gold-text" id="listingCollapse{{@index}}">
                     {{#each property}}
-                        <a href="{{link}}" target="_blank">
+                        <a onclick="linkEvent('{{link}}');" href="{{link}}" target="_blank">
                             <button class="muli btn btn-light btn-block btn-property" type="button">
                                 <h4 class='text-center mb-0 pb-0'>{{city}}</h4>
                                 <hr class='m-0 p-0'>
