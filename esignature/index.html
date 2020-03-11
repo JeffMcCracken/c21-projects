@@ -1,88 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>C21 E-Signature Tool</title>
-    <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="functions.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>C21 E-Signature Tool</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="functions.js"></script>
+  <script src="https://kit.fontawesome.com/07290be3fa.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <form>
-        <ul class="form-style-1">
-            <li>
-                <label>Full Name</label>
-                <input type="text" id="firstName" class="field-divided" placeholder="First"/>&nbsp;<input type="text" id="lastName" class="field-divided" placeholder="Last"/></li>
-            <li>
-                <label>Cell Number</label>
-                <input type="text" id="phoneNumber" class="field-long" />
-            </li>
-            <li>
-                <label>Title</label>
-                <select id="title" class="field-select" onchange="checkCustom();">
-                    <option value="realtor/broker">Realtor/Broker</option>
-                    <option value="customTitle">Custom</option>
-                </select>
-                <div id="customTitleDiv" style="display:none">
-                    <label>Enter Custom Title</label>    
-                    <input type="text" id="customTitle" class="field-long" />
-                </div>
-            </li>
-            <li>
-                <label>Office</label>
-                <select id="location" class="field-select">
-                    <option value="bloomington">Bloomington</option>
-                    <option value="carmel">Carmel</option>
-                    <option value="commercial">Commercial</option>
-                    <option value="downtown">Downtown Indianapolis</option>
-                    <option value="fishers">Fishers</option>
-                    <option value="greenwood">Greenwood</option>
-                    <option value="hendricks">Hendricks County</option>
-                    <option value="ninetySixth">North Indianapolis - 96th St</option>
-                    <option value="zionsville">Zionsville</option>
-                </select>
-            </li>
-            <li>
-                <label>Personal Website URL</label>
-                <input type="text" id="webURL" class="field-long">
-            </li>
-            <li>
-                <button type="button" onclick="generateSignature();">Submit</button>
-            </li>
-        </ul>
-    </form>
-    <div id="emailSigDiv">
-        <br><br>
-        <table id="emailSig" style="display:none">
-            <tr>
-                <td width="70" style="width: 70px">
-                    <img class="EmojiInsert"
-                        alt="C21 Logo" right.png=""
-                        style="user-select: none;width:70px"
-                        src="https://indycareerinrealestate.com/frontend/images/c21logo_new.jpg">
-                </td>
-                <td style="vertical-align: middle;padding-left: 10px">
-                    <p class="sig-content" style="margin: 0">
-                        <span id="emailSigName" style="font-weight: bold;font-size: 12pt"></span><br>
-                        <span class="sig-10">
-                            <span id="emailSigTitle"></span><br>
-                            <span id="emailSigPhoneNumber"></span><br>
-                            <span id="emailSigAddress"></span><br>
-                            <span>Find your next home</span>
-                            <a id="agentLink" href="http://www.century21scheetz.com/" style="color: #A19276;">HERE</a>
-                        </span>
-                    </p>
-                </td>
-            </tr>
-        </table>
+  <form>
+    <ul class="form-style-1">
+      <li>
+        <label>Full Name</label>
+        <input type="text" id="firstName" class="field-divided" placeholder="First"/>&nbsp;<input type="text" id="lastName" class="field-divided" placeholder="Last"/></li>
+      <li>
+        <label>Cell Number</label>
+        <input type="text" id="phoneNumber" class="field-long" />
+      </li>
+      <li>
+        <label>Title</label>
+        <select id="title" class="field-select" onchange="checkCustom();">
+          <option value="realtor&reg;">REALTOR&reg;</option>
+          <option value="customTitle">Custom</option>
+        </select>
+        <div id="customTitleDiv" style="display:none">
+          <label>Enter Custom Title</label>    
+          <input type="text" id="customTitle" class="field-long" />
+        </div>
+      </li>
+      <li>
+        <label>Office</label>
+        <select id="location" class="field-select">
+          <option value="bloomington">Bloomington</option>
+          <option value="carmel">Carmel</option>
+          <option value="commercial">Commercial</option>
+          <option value="downtown">Downtown Indianapolis</option>
+          <option value="fishers">Fishers</option>
+          <option value="greenwood">Greenwood</option>
+          <option value="hendricks">Hendricks County</option>
+          <option value="ninetySixth">North Indianapolis - 96th St</option>
+          <option value="zionsville">Zionsville</option>
+        </select>
+      </li>
+      <!-- <li>
+        <label>Personal Website URL</label>
+        <input type="text" id="webURL" class="field-long" />
+      </li> -->
+      <li>
+        <label>Web URL</label>
+        <select id="webURL" class="field-select" onchange="checkCustomURL();">
+          <option value="https://c21scheetz.com/">https://c21scheetz.com/</option>
+          <option value="agentURL">Agent Website</option>
+          <option value="customURL">Custom</option>
+        </select>
+        <div id="customURLDiv" style="display:none">
+          <label>Enter Custom URL</label>    
+          <input type="text" id="customURL" class="field-long" />
+          <label>Enter Custom Preview Text</label>    
+          <input type="text" id="previewURL" class="field-long" />
+        </div>
+        <div id="agentURLDiv" style="display:none">
+          <label>Agent URL</label>
+          <input type="text" id="agentURL" class="field-long" />
+          <label>URL Preview Text</label>
+          <input type="text" id="agentPreviewURL" class="field-long" />
+        </div>
+      </li>
+      <li>
+        <label>Social links?</label>
+        <label class="switch">
+          <input id="socialSwitch" type="checkbox" onchange="toggleSocials();">
+          <span class="slider round"></span>
+        </label>
+        <div id="socialSection" class="socialLinks" style="display:none">
+          <div class="fbookLink">
+            <label>Facebook</label>
+            <input type="text" id="fbookURL"class="field-long" />
+          </div>
+          <div class="linkedInLink">
+            <label>LinkedIn</label>
+            <input type="text" id="linkedInURL"class="field-long" />
+          </div>
+          <div class="instagramLink">
+            <label>Instagram</label>
+            <input type="text" id="instagramURL"class="field-long" />
+          </div>
+        </div>
+      </li>
+      <li>
+        <button type="button" onclick="generateSignature();">Submit</button>
+      </li>
+    </ul>
+  </form>
+  <br><br>
+  <div id="emailSigDiv" style="display: none;">
+    <div style="font-family: Calibri;">
+      <div id="emailSigName"
+          style="text-transform: uppercase;
+                  color: #beaf87;
+                  letter-spacing: 1.1px;
+                  font-size: 34px;"
+      ></div>
+      <div id="emailSigTitle"
+          style="text-transform: uppercase;
+                  color: black;
+                  letter-spacing: 1.1px;
+                  font-size: 32px;"
+      ></div>
+      <br>
+      <div id="emailSigOfficePhoneNumber"></div>
+      <div id="emailSigPhoneNumber"></div>
+      <a id="agentLink"
+         target="_blank"
+         style="color: black;
+                text-decoration: none;"
+      ></a>
+      <div id="socialDiv"
+           class="social-icons"
+           style="font-size: 35px;
+                  margin-top:25px;
+                  text-decoration: none;"
+      >
+        <a id="instagramLink" 
+           target="_blank"
+           style="margin-right: 5px;
+                  margin-bottom: 0px;
+                  color: black;"
+        >
+          <img src="https://c21scheetz.com/files/2020/03/instagram-e1583440678654.png">
+        </a>
+        <a id="linkedInLink"
+           target="_blank"
+           style="margin-right: 5px;
+                  margin-bottom: 0px;
+                  color: black;"
+        >
+          <img src="https://c21scheetz.com/files/2020/03/linkedin-e1583440595465.png">
+        </a>
+        <a id="fbookLink"
+           target="_blank"
+           style="margin-bottom: 0px;"
+        >
+          <img src="https://c21scheetz.com/files/2020/03/facebook-e1583440712636.png">
+        </a>
+      </div>
+      <div id="logoDiv"
+           style="margin-top: 25px"
+      >
+        <img src="https://c21scheetz.com/files/2020/03/email-sig-logo.png"
+             alt="CENTURY 21 Scheetz logo"
+        >
+      </div>
     </div>
-    <form id='confirmBtn' style='display:none'>
-        <ul class='form-style-1'>
-            <li>
-                <button type="button" onclick="confirmSignature()">Confirm</button>
-            </li>
-        </ul>
-    </form>
+  </div>
+  <form id='confirmBtn' style='display:none'>
+    <ul class='form-style-1'>
+      <li>
+        <button type="button" onclick="confirmSignature()">Confirm</button>
+      </li>
+    </ul>
+  </form>
 </body>
 </html>
